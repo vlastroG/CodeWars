@@ -1,11 +1,13 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 public class Program
 {
     public static void Main()
     {
-        string test = "To_camel_case";
+        string test = "to_camel_case";
         Console.WriteLine(ToCamelCase(test));
 
         Console.ReadLine();
@@ -26,7 +28,7 @@ public class Program
         }
 
 
-        StringBuilder sb = new();
+        StringBuilder sb = new StringBuilder();
         foreach (var item in words)
         {
             sb.Append(item);
