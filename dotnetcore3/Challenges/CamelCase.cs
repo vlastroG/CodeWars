@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace dotnetcore3
+namespace dotnetcore3.Challenges
 {
     internal class CamelCase
     {
