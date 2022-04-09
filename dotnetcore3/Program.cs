@@ -2,14 +2,16 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using static dotnetcore3.Challenges.TimeFormat;
+using static dotnetcore3.Challenges.StringMerger;
 
 public class Program
 {
     public static void Main()
     {
-        Console.WriteLine(GetReadableTime(60));
-        Console.WriteLine(GetReadableTime(2147483647));
+        Console.WriteLine(isMerge("Can we merge it? Yes, we can!", "n ee tYw n!", "Cawe mrgi? es, eca"));
+        Console.WriteLine(isMerge("", "", ""));
+        Console.WriteLine(isMerge("codewars", "", "codewars"));
+        
 
         Console.ReadLine();
     }
