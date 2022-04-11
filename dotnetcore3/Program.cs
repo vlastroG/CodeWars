@@ -37,10 +37,12 @@ public class Program
 
         //Console.WriteLine(Multiplies3and5.Solution(10));
 
-        var a1 = new string[] { "arp", "live", "strong" };
+        //var a1 = new string[] { "arp", "live", "strong" };
 
-        var a2 = new string[] { "lively", "alive", "harp", "sharp", "armstrong" };
-        Console.WriteLine(WhichAreIn.inArray(a1, a2));
+        //var a2 = new string[] { "lively", "alive", "harp", "sharp", "armstrong" };
+        //Console.WriteLine(WhichAreIn.inArray(a1, a2));
+
+        Console.WriteLine(WeightSort.orderWeight(" 56 65 74 100 99 68 86 180   90 "));
 
         Console.ReadLine();
     }
