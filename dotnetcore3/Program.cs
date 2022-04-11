@@ -1,9 +1,5 @@
 ﻿using dotnetcore3.Challenges;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using static dotnetcore3.Challenges.ZerosToEnd;
 
 public class Program
 {
@@ -35,7 +31,9 @@ public class Program
         //Console.WriteLine(RomainConvert.Solution(1990));
         //Console.WriteLine(RomainConvert.Solution(2008));
 
-        Console.WriteLine(ZerosToEnd.MoveZeroes(new int[] { 1, 2, 0, 1, 0, 1, 0, 3, 0, 1 }));
+        //Console.WriteLine(ZerosToEnd.MoveZeroes(new int[] { 1, 2, 0, 1, 0, 1, 0, 3, 0, 1 }));
+
+        Console.WriteLine(PhoneNumber.CreatePhoneNumber(new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 0 }));
 
         Console.ReadLine();
     }
