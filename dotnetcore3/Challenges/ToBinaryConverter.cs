@@ -4,7 +4,7 @@ using System.Text;
 
 namespace dotnetcore3.Challenges
 {
-    internal static class Converter
+    internal static class ToBinaryConverter
     {
         public static string ToBinary(int n)
         {
