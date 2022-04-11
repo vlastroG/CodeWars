@@ -33,7 +33,9 @@ public class Program
 
         //Console.WriteLine(ZerosToEnd.MoveZeroes(new int[] { 1, 2, 0, 1, 0, 1, 0, 3, 0, 1 }));
 
-        Console.WriteLine(PhoneNumber.CreatePhoneNumber(new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 0 }));
+        //Console.WriteLine(PhoneNumber.CreatePhoneNumber(new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 0 }));
+
+        Console.WriteLine(Multiplies3and5.Solution(10));
 
         Console.ReadLine();
     }
