@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using static dotnetcore3.Challenges.Converter;
+using static dotnetcore3.Challenges.WordsOrder;
 
 public class Program
 {
@@ -13,8 +13,14 @@ public class Program
         //Console.WriteLine(isMerge("", "", ""));
         //Console.WriteLine(isMerge("codewars", "", "codewars"));
 
-        Console.WriteLine(Converter.ToBinary(3));
-        Console.WriteLine(Converter.ToBinary(-3));
+        //Console.WriteLine(Converter.ToBinary(3));
+        //Console.WriteLine(Converter.ToBinary(-3));
+
+        Console.WriteLine(Order("is2 Thi1s T4est 3a"));
+        Console.WriteLine(Order(""));   
+
+        Console.WriteLine(Order_byNDusan88("is2 Thi1s T4est 3a"));
+        Console.WriteLine(Order_byNDusan88(""));
 
         Console.ReadLine();
     }
