@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using static dotnetcore3.Challenges.RomainConvert;
+using static dotnetcore3.Challenges.ZerosToEnd;
 
 public class Program
 {
@@ -27,13 +27,15 @@ public class Program
         //Console.WriteLine(WordsMiddle.GetMiddle("middle"));
         //Console.WriteLine(WordsMiddle.GetMiddle("A"));
 
-        Console.WriteLine(RomainConvert.Solution(1000));
-        Console.WriteLine(RomainConvert.Solution(1));
-        Console.WriteLine(RomainConvert.Solution(2));
-        Console.WriteLine(RomainConvert.Solution(4));
-        Console.WriteLine(RomainConvert.Solution(500));
-        Console.WriteLine(RomainConvert.Solution(1990));
-        Console.WriteLine(RomainConvert.Solution(2008));
+        //Console.WriteLine(RomainConvert.Solution(1000));
+        //Console.WriteLine(RomainConvert.Solution(1));
+        //Console.WriteLine(RomainConvert.Solution(2));
+        //Console.WriteLine(RomainConvert.Solution(4));
+        //Console.WriteLine(RomainConvert.Solution(500));
+        //Console.WriteLine(RomainConvert.Solution(1990));
+        //Console.WriteLine(RomainConvert.Solution(2008));
+
+        Console.WriteLine(ZerosToEnd.MoveZeroes(new int[] { 1, 2, 0, 1, 0, 1, 0, 3, 0, 1 }));
 
         Console.ReadLine();
     }
