@@ -35,7 +35,12 @@ public class Program
 
         //Console.WriteLine(PhoneNumber.CreatePhoneNumber(new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 0 }));
 
-        Console.WriteLine(Multiplies3and5.Solution(10));
+        //Console.WriteLine(Multiplies3and5.Solution(10));
+
+        var a1 = new string[] { "arp", "live", "strong" };
+
+        var a2 = new string[] { "lively", "alive", "harp", "sharp", "armstrong" };
+        Console.WriteLine(WhichAreIn.inArray(a1, a2));
 
         Console.ReadLine();
     }
