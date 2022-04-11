@@ -11,5 +11,10 @@ namespace dotnetcore3.Challenges
 
             return result.ToArray();
         }
+
+        public static int[] MoveZeroes_by_kampotE(int[] arr)
+        {
+            return arr.OrderBy(x => x == 0).ToArray();
+        }
     }
 }
