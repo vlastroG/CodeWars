@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using static dotnetcore3.Challenges.WordsMiddle;
+using static dotnetcore3.Challenges.RomainConvert;
 
 public class Program
 {
@@ -22,10 +22,18 @@ public class Program
         //Console.WriteLine(Order_byNDusan88("is2 Thi1s T4est 3a"));
         //Console.WriteLine(Order_byNDusan88(""));
 
-        Console.WriteLine(WordsMiddle.GetMiddle("test"));
-        Console.WriteLine(WordsMiddle.GetMiddle("testing"));
-        Console.WriteLine(WordsMiddle.GetMiddle("middle"));
-        Console.WriteLine(WordsMiddle.GetMiddle("A"));
+        //Console.WriteLine(WordsMiddle.GetMiddle("test"));
+        //Console.WriteLine(WordsMiddle.GetMiddle("testing"));
+        //Console.WriteLine(WordsMiddle.GetMiddle("middle"));
+        //Console.WriteLine(WordsMiddle.GetMiddle("A"));
+
+        Console.WriteLine(RomainConvert.Solution(1000));
+        Console.WriteLine(RomainConvert.Solution(1));
+        Console.WriteLine(RomainConvert.Solution(2));
+        Console.WriteLine(RomainConvert.Solution(4));
+        Console.WriteLine(RomainConvert.Solution(500));
+        Console.WriteLine(RomainConvert.Solution(1990));
+        Console.WriteLine(RomainConvert.Solution(2008));
 
         Console.ReadLine();
     }
