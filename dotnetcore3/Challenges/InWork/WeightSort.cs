@@ -14,9 +14,10 @@ namespace dotnetcore3.Challenges
             //Regex regex = new Regex("[ ]{2,}", options);
             //string res = regex.Replace(strng, " ");
 
-            strng.Split(' ').Where(s => !String.IsNullOrWhiteSpace(s)).ToList().Sort();
-            var res = strng.ToArray().OrderBy(s => s.Select(t => int.Parse(t.ToString())));
-            return strNums.ToString();
+            //strng.Split(' ').Where(s => !String.IsNullOrWhiteSpace(s)).ToList().Sort();
+            //var res = strng.ToArray().OrderBy(s => s.Select(t => int.Parse(t.ToString())));
+            //return strNums.ToString();
+            return "";
         }
     }
 }
