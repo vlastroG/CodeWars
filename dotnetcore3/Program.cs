@@ -1,4 +1,5 @@
 ﻿using dotnetcore3.Challenges;
+using dotnetcore3.Challenges.LinkedLists;
 using System;
 
 public class Program
@@ -73,6 +74,12 @@ public class Program
         //  new int[] {2, 8, 7, 4, 1, 9, 6, 3, 5},
         //  new int[] {3, 0, 0, 4, 8, 1, 1, 7, 9},
         //}));
+
+        Node chained = null;
+        chained = Node.Push(chained, 3);
+        chained = Node.Push(chained, 2);
+        chained = Node.Push(chained, 1);
+        Node.Push(chained, 8);
 
         Console.ReadLine();
     }
