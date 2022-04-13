@@ -1,5 +1,5 @@
 ﻿using dotnetcore3.Challenges;
-using dotnetcore3.Challenges.LinkedLists;
+using dotnetcore3.Challenges.InWork;
 using System;
 
 public class Program
@@ -84,7 +84,9 @@ public class Program
 
         //var t = Node.InsertNth(null, 0, 12).Data;
         //var t2 = Node.InsertNth(null, 0, 12).Next;
-                         
+
+        var arr = new int[] { 4, 3, 9, 7, 2, 1 };
+        Console.WriteLine(SquareOrNotTo.SquareOrSquareRoot(arr));
 
         Console.ReadLine();
     }
