@@ -17,29 +17,19 @@ namespace dotnetcore3.Challenges.LinkedLists
 
         public static Node Push(Node head, int data)
         {
-            if (head != null && head.Next == null)
-            {
-                return head.Next = new Node(data);
-            }
-            else if (head != null && head.Next != null)
-            {
-                Node buff = head.Next;
-                head.Next = new Node(data);
-                head.Next.Next = buff;
+            var n = new Node(data);
+            n.Next = head;
+            return n;
 
-                return head.Next;
-            }
-
-            else return new Node(data);
         }
 
         public static Node BuildOneTwoThree()
         {
-            var head = new Node(1);
-            var n2 = Node.Push(head, 2);
-            Node.Push(n2, 3);
+            var n3 = new Node(3);
+            var n2 = Node.Push(n3, 2);
+            var n1 = Node.Push(n2, 1);
 
-            return head;
+            return n1;
         }
     }
 }

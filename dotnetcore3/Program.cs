@@ -75,11 +75,13 @@ public class Program
         //  new int[] {3, 0, 0, 4, 8, 1, 1, 7, 9},
         //}));
 
-        Node chained = null;
-        chained = Node.Push(chained, 3);
-        chained = Node.Push(chained, 2);
-        chained = Node.Push(chained, 1);
-        Node.Push(chained, 8);
+
+        Console.WriteLine(Equals(1, Node.Push(null, 1).Data));
+        Console.WriteLine(Equals(null, Node.Push(null, 1).Next));
+        Console.WriteLine(Equals(2, Node.Push(new Node(1), 2).Data));
+        var t = Node.Push(new Node(1), 2).Next.Data;
+        Console.WriteLine(Equals(1, t));
+
 
         Console.ReadLine();
     }
