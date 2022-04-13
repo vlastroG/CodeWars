@@ -84,7 +84,7 @@ public class Program
 
         var t = Node.InsertNth(null, 0, 12).Data;
         var t2 = Node.InsertNth(null, 0, 12).Next;
-
+                         
 
         Console.ReadLine();
     }

@@ -16,6 +16,8 @@ namespace dotnetcore3.Challenges.LinkedLists
             this.Next = null;
         }
 
+
+
         public static Node InsertNth(Node head, int index, int data)
         {
             if (index < 0)
