@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace dotnetcore3.Challenges.LinkedLists
@@ -13,6 +14,32 @@ namespace dotnetcore3.Challenges.LinkedLists
         {
             this.Data = data;
             this.Next = null;
+        }
+
+        public static int Length(Node head)
+        {
+            var sum = 0;
+            var node = head;
+            while (node != null)
+            {
+                node = node.Next;
+                sum++;
+            }
+            return sum;
+        }
+
+        public static int Count(Node head, Predicate<int> func)
+        {
+            var count = 0;
+            var node = head;
+
+            while (node != null)
+            {
+                if (func(node.Data))
+                    count++;
+                node = node.Next;
+            }
+            return count;
         }
 
         public static Node Push(Node head, int data)
