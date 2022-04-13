@@ -16,6 +16,26 @@ namespace dotnetcore3.Challenges.LinkedLists
             this.Next = null;
         }
 
+        public static Node GetNth(Node node, int index)
+        {
+            if (!(index >= 0 && index < Node.Length(node)))
+            {
+                throw new ArgumentException($"{nameof(index)} should be in the range [0..length-1]");
+            }
+            else
+            {
+                var nodeNum = 0;
+                var nodeNth = node;
+
+                while (nodeNum != index)
+                {
+                    nodeNth = nodeNth.Next;
+                    nodeNum++;
+                }
+                return nodeNth;
+            }
+        }
+
         public static int Length(Node head)
         {
             var sum = 0;
