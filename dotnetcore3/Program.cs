@@ -82,8 +82,8 @@ public class Program
         //var t = Node.Push(new Node(1), 2).Next.Data;
         //Console.WriteLine(Equals(1, t));
 
-        var t = Node.InsertNth(null, 0, 12).Data;
-        var t2 = Node.InsertNth(null, 0, 12).Next;
+        //var t = Node.InsertNth(null, 0, 12).Data;
+        //var t2 = Node.InsertNth(null, 0, 12).Next;
                          
 
         Console.ReadLine();
