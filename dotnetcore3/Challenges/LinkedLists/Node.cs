@@ -16,6 +16,45 @@ namespace dotnetcore3.Challenges.LinkedLists
             this.Next = null;
         }
 
+        public static Node InsertNth(Node head, int index, int data)
+        {
+            if (index < 0)
+            {
+                throw new ArgumentOutOfRangeException($"{nameof(index)} should be in the range [0..length-1]");
+            }
+            else if (index > Node.Length(head) && index != 0)
+            {
+                throw new ArgumentOutOfRangeException($"{nameof(index)} should be in the range [0..length-1]");
+            }
+            else
+            {
+                if (head == null)
+                {
+                    return Node.Push(head, data);
+                }
+                else if (index == Node.Length(head))
+                {
+                    Node.GetNth(head, index - 1).Next = new Node(data);
+                    return head;
+                }
+                else
+                {
+                    var nextNode = Node.GetNth(head, index);
+                    if (index == 0)
+                    {
+                        return Node.Push(nextNode, data);
+                    }
+                    else
+                    {
+                        var node = new Node(data);
+                        Node.GetNth(head, index - 1).Next = node;
+                        node.Next = nextNode;
+                        return head;
+                    }
+                }
+            }
+        }
+
         public static Node GetNth(Node node, int index)
         {
             if (!(index >= 0 && index < Node.Length(node)))

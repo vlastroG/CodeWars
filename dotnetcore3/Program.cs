@@ -76,11 +76,14 @@ public class Program
         //}));
 
 
-        Console.WriteLine(Equals(1, Node.Push(null, 1).Data));
-        Console.WriteLine(Equals(null, Node.Push(null, 1).Next));
-        Console.WriteLine(Equals(2, Node.Push(new Node(1), 2).Data));
-        var t = Node.Push(new Node(1), 2).Next.Data;
-        Console.WriteLine(Equals(1, t));
+        //Console.WriteLine(Equals(1, Node.Push(null, 1).Data));
+        //Console.WriteLine(Equals(null, Node.Push(null, 1).Next));
+        //Console.WriteLine(Equals(2, Node.Push(new Node(1), 2).Data));
+        //var t = Node.Push(new Node(1), 2).Next.Data;
+        //Console.WriteLine(Equals(1, t));
+
+        var t = Node.InsertNth(null, 0, 12).Data;
+        var t2 = Node.InsertNth(null, 0, 12).Next;
 
 
         Console.ReadLine();
