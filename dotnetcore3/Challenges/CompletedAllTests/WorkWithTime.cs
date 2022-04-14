@@ -2,23 +2,10 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace dotnetcore3.Challenges
+namespace dotnetcore3.Challenges.CompletedAllTests
 {
-    internal class ClockInMirror
+    public static class WorkWithTime
     {
-        //05:25 --> 06:35
-        //01:50 --> 10:10
-        //11:58 --> 12:02
-        //12:01 --> 11:59
-
-        //Please complete the function WhatIsTheTime(timeInMirror),
-        //where timeInMirror is the mirrored time(what Peter sees) as string.
-        //Return the real time as a string.
-
-        //Consider hours to be between 1 <= hour< 13.
-        //So there is no 00:20, instead it is 12:20.
-        //There is no 13:20, instead it is 01:20.
-
         public static string WhatIsTheTime(string timeInMirror)
         {
             // Get int hours and minutes from input
@@ -45,13 +32,32 @@ namespace dotnetcore3.Challenges
             {
                 realHours += 12;
             }
-           
+
             return $"{realHours:00}:{realMinutes:00}";
         }
 
         public static string WhatIsTheTimeBy_jpdagger(string timeInMirror)
         {
             return DateTime.Parse("12:00").Subtract(TimeSpan.Parse(timeInMirror)).ToString("hh:mm");
+        }
+
+
+        public static string GetReadableTime(int seconds)
+        {
+            // Input seconds to TimeSpan
+            TimeSpan time = new TimeSpan(0, 0, seconds);
+
+            TimeSpan maxTime = new TimeSpan(99, 59, 59); // Calculate max time
+            if (time > maxTime)
+                time = maxTime; // Comparison of input and max time
+            var total = (int)time.TotalHours; // Get hours of time without days
+
+            return $"{total:00}:" + time.ToString(@"mm\:ss");
+        }
+
+        public static string GetReadableTimeBy_HardTourVela(int seconds)
+        {
+            return string.Format("{0:d2}:{1:d2}:{2:d2}", seconds / 3600, seconds / 60 % 60, seconds % 60);
         }
     }
 }
