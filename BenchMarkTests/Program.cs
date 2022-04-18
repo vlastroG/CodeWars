@@ -1,4 +1,4 @@
 ﻿using BenchmarkDotNet.Running;
 using BenchMarkTests;
 
-BenchmarkRunner.Run<RemoveArrItemsTest>();
+BenchmarkRunner.Run<Test>();
