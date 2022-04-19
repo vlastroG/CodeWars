@@ -22,6 +22,17 @@ namespace dotnetcore3.Challenges.CompletedAllTests.WorkWithListsAndArrays
             {
                 return arr.Where((e, i) => i % 2 == 0).ToArray();
             }
+
+
+            public static IEnumerable<int> GetIntegersFromList(List<object> listOfItems)
+            {
+                return listOfItems.Where(s => s.GetType() == typeof(int)).Select(x => (int)x).ToList();
+            }
+
+            public static IEnumerable<int> by_Masters_GetIntegersFromList(List<object> listOfItems)
+            {
+                return listOfItems.OfType<int>();
+            }
         }
     }
 }
