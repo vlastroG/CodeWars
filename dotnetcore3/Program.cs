@@ -6,14 +6,7 @@ public class Program
 {
     public static void Main()
     {
-        var list = SqInRect.sqInRect(3, 5);
-        if (!list.Equals(null))
-        {
-            foreach (var item in list)
-            {
-                Console.WriteLine(item);
-            }
-        }
+        var list = UpArrayKata.UpArray(new int[] { 2, 3, 9 });
 
         Console.ReadLine();
     }

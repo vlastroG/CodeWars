@@ -1,34 +1,42 @@
 ﻿using BenchmarkDotNet.Attributes;
 using System.Text.RegularExpressions;
+using dotnetcore3.Challenges.CompletedAllTests.WorkWithMath;
 
 namespace BenchMarkTests
 {
     [MemoryDiagnoser]
+    [WarmupCount(1)]
+    [IterationCount(10)]
     public class Test
     {
-        private string _name = "pwgjb245625467sdfgljb0578ewgh54whRWTHJFFGNSFGNSFDGH94034567sde;kbgnj$%^@#%$YHU@%^Q";
-
-        [Benchmark(Baseline = true)]
-        public bool Alphanumeric() =>
-            new Regex("^[a-zA-Z0-9]+$").Match(_name).Success;
+        private int[] _num = new int[1000000];
 
         [Benchmark]
-        public bool My_Alphanumeric()
+        public int[]? UpArray()
         {
-            if (_name == String.Empty)
-                return false;
-            else
+            int[] num = _num;
+            if (num.Length == 0 || num.Any(a => a < 0 || a > 9))
+                return null;
+
+            for (var i = num.Length - 1; i >= 0; i--)
             {
-                var charArr = _name.ToLower().ToCharArray();
-                foreach (var item in charArr)
+                if (num[i] == 9)
                 {
-                    if (!(item >= 97 && item <= 122 || item >= 48 && item <= 57))
-                    {
-                        return false;
-                    }
+                    num[i] = 0;
+                }
+                else
+                {
+                    num[i]++;
+                    return num;
                 }
             }
-            return true;
+            return new[] { 1 }.Concat(num).ToArray();
+        }
+
+        [Benchmark(Baseline = true)]
+        public int[]? My_UpArray()
+        {
+            return UpArrayKata.UpArray(_num);
         }
     }
 }
