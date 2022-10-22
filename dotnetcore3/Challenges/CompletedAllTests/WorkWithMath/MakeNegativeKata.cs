@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace dotnetcore3.Challenges.InWork
+namespace dotnetcore3.Challenges.CompletedAllTests.WorkWithMath
 {
     public class MakeNegativeKata
     {
@@ -30,6 +30,6 @@ namespace dotnetcore3.Challenges.InWork
             return int.Parse(sb.ToString());
         }
 
-        
+
     }
 }
