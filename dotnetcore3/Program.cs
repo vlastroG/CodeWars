@@ -10,7 +10,7 @@ public class Program
 {
     public static void Main()
     {
-        StringMerger.isMerge("BvQg>4>idvyZsR21*j[mA6EXX8", "ivysR1*[mX", "BvQg>4>dZ2jA6EX8");
+        LargeFactorial.Factorial(15);
     }
 
 }
