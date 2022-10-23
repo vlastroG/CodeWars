@@ -23,5 +23,29 @@ namespace dotnetcore3.Challenges.CompletedAllTests.WorkWithString
             }
             return String.Join("\n", lines);
         }
+
+
+        public static bool HasUniqueChars(string str)
+        {
+            return str.Length == str.Distinct().Count();
+        }
+
+        public static string ToCsvText(int[][] array)
+        {
+            return String.Join('\n', array.Select(arr => String.Join(',', arr)));
+        }
+
+        public static int CountSmileys(string[] smileys)
+        {
+            return smileys.Where(smile => Regex.IsMatch(smile, @"^[:;][-~]?[)D]")).Count();
+        }
+
+        public static string GenerateShape(int n)
+        {
+            return String.Join('\n', new string[n].Select(line => String.Concat(new char[n].Select(s => s = '+'))));
+        }
+
+        public static string GenerateShape_Best(int n)
+            => string.Join("\n", Enumerable.Repeat(new string('+', n), n));
     }
 }

@@ -10,7 +10,7 @@ public class Program
 {
     public static void Main()
     {
-        LargeFactorial.Factorial(15);
+        StringFun.GenerateShape(5);
     }
 
 }
