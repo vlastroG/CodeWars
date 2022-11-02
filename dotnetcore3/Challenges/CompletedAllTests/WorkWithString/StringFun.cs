@@ -47,5 +47,36 @@ namespace dotnetcore3.Challenges.CompletedAllTests.WorkWithString
 
         public static string GenerateShape_Best(int n)
             => string.Join("\n", Enumerable.Repeat(new string('+', n), n));
+
+        public static string Decode(string morseCode)
+        {
+            StringBuilder sb = new StringBuilder();
+            var wordsMorse = morseCode.TrimStart().TrimEnd().Split("   ");
+            foreach (var wordMorse in wordsMorse)
+            {
+                var word = String.Concat(wordMorse.Split(' ').Select(morse => /*MorseCode.Get(morse)*/morse));
+                sb.Append(word);
+                sb.Append(' ');
+            }
+            return sb.ToString().TrimEnd();
+        }
+
+        public static int DuplicateCount(string str)
+        {
+            var charsAnalyze = str.ToLower().Trim().ToList();
+            var chars = charsAnalyze.Distinct().ToList();
+            int count = 0;
+            foreach (var symbol in chars)
+            {
+                int countBeforeDeletion = charsAnalyze.Count;
+                charsAnalyze.RemoveAll(x => x == symbol);
+                int countAfterDeletion = charsAnalyze.Count;
+                count = countBeforeDeletion - countAfterDeletion > 1 ? ++count : count;
+            }
+            return count;
+
+            // or just this :)
+            // return str.ToLower().GroupBy(c => c).Count(c => c.Count() > 1);
+        }
     }
 }

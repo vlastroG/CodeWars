@@ -10,7 +10,7 @@ public class Program
 {
     public static void Main()
     {
-        StringFun.GenerateShape(5);
+        StringFun.DuplicateCount("Indivisibilities");
     }
 
 }
