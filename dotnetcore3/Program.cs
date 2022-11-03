@@ -10,7 +10,7 @@ public class Program
 {
     public static void Main()
     {
-        StringFun.DuplicateCount("Indivisibilities");
+        StringFun.IsItANum("S:)0207ERGQREG88349F82!efRF)");
     }
 
 }

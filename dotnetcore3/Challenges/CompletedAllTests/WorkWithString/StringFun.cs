@@ -78,5 +78,26 @@ namespace dotnetcore3.Challenges.CompletedAllTests.WorkWithString
             // or just this :)
             // return str.ToLower().GroupBy(c => c).Count(c => c.Count() > 1);
         }
+
+        public static string ShorterReverseLonger(string a, string b)
+        {
+            a = a is null ? String.Empty : a;
+            b = b is null ? String.Empty : b;
+            var (max, min) = a.Length >= b.Length ? (a, b) : (b, a);
+            return min + string.Concat(max.Reverse()) + min;
+        }
+
+        //public static bool validBraces(String braces)
+        //{
+        //    //var line = braces.Replace(']', '[').Replace(')', '(').Replace('}', '{');
+        //    //var line = braces.inde
+        //}
+
+        public static String IsItANum(string str)
+        {
+            var numbers = str.Where(c => c >= 48 && c <= 57).ToList();
+            return numbers.Count() == 11 && numbers[0] == '0' ? String.Concat(numbers) : "Not a phone number";
+            // char.IsDigit()  !!!!!
+        }
     }
 }
