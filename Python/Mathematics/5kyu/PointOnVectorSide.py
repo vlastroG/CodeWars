@@ -16,6 +16,14 @@ def find_linear(point1, point2):
     return k, b, point2[0] > point1[0]
 
 
+# solution with cross product
+# def point_vs_vector(point, vector):
+#     [ax, ay], [bx, by] = vector
+#     x, y = point
+#     cross = (bx - ax) * (y - ay) - (by - ay) * (x - ax)
+#     return (cross < 0) - (cross > 0)
+
+
 vector = [[1201, 9120], [939, 8807]]
 point = -179317, -206537
 print(point_vs_vector(point, vector))
