@@ -5,7 +5,9 @@ VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dotnetcore3", "dotnetcore3\dotnetcore3.csproj", "{54596F77-BA0E-4DCB-9F36-1B02A8713C27}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BenchMarkTests", "BenchMarkTests\BenchMarkTests.csproj", "{074A7B40-9879-4C78-8139-6C3879743605}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BenchMarkTests", "BenchMarkTests\BenchMarkTests.csproj", "{074A7B40-9879-4C78-8139-6C3879743605}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dotnet6", "dotnet6\dotnet6.csproj", "{5BDFD478-29B5-4B6F-BD7D-CD0E0664EC8B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{074A7B40-9879-4C78-8139-6C3879743605}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{074A7B40-9879-4C78-8139-6C3879743605}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{074A7B40-9879-4C78-8139-6C3879743605}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BDFD478-29B5-4B6F-BD7D-CD0E0664EC8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BDFD478-29B5-4B6F-BD7D-CD0E0664EC8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BDFD478-29B5-4B6F-BD7D-CD0E0664EC8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BDFD478-29B5-4B6F-BD7D-CD0E0664EC8B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
